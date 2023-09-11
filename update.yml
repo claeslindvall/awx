@@ -9,18 +9,30 @@
       update_cache: yes
     become: yes
     tags:
-    - update
+    - update1
  
-- name: Some Roles
+- name: Hello World2!
   hosts: all
-  roles:
-    - common
-    - webservers
-    - proxmox
-    - virtualmachines
-  become: yes
-  tags:
-  - diverse
+ 
+  tasks:
+ 
+  - name: Hello World2!
+    apt:
+      update_cache: yes
+    become: yes
+    tags:
+    - update2
+
+#- name: Some Roles
+#  host#s: all
+#  roles:
+#    - common
+#    - webservers
+#    - proxmox
+#    - virtualmachines
+#  become: yes
+#  tags:
+#  - diverse
 #
 #- name: Hello World!
 #  hosts: all
