@@ -1,0 +1,47 @@
+---
+- name: Hello World!
+  hosts: all
+ 
+  tasks:
+ 
+  - name: Hello World!
+    apt:
+      update_cache: yes
+    become: yes
+    tags:
+    - update
+#- name: Some Roles
+#  hosts: all
+#  roles:
+#    - common
+#    - webservers
+#    - proxmox
+#    - virtualmachines
+#
+#- name: Hello World!
+#  hosts: all
+# 
+#  tasks:
+# 
+#  - name: Hello World!
+#    apt:
+#      update_cache: yes
+#    become: yes
+#    tags:
+#    - update
+
+#    shell: echo "Hi! Tower is working."
+#
+
+
+#- name: Update the system
+#  hosts: all
+#  tasks:
+#  become: yes
+#  shell: echo "Hi! Tower is working."
+#  # apt:
+#    # update_cache: yes
+#  tags:
+#  - update
+
+
