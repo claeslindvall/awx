@@ -7,6 +7,7 @@
   - name: Hello World!
     apt:
       update_cache: yes
+    become: yes
 
 #    shell: echo "Hi! Tower is working."
 #
