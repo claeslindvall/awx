@@ -12,8 +12,9 @@
   hosts: all
   tasks:
   become: yes
-  apt:
-    update_cache: yes
+  shell: echo "Hi! Tower is working."
+  # apt:
+    # update_cache: yes
   tags:
   - update
 
