@@ -5,7 +5,9 @@
   tasks:
  
   - name: Hello World!
-    shell: echo "Hi! Tower is working."
+    apt:
+    update_cache: yes
+#    shell: echo "Hi! Tower is working."
 
 
 #- name: Update the system
