@@ -1,13 +1,4 @@
 ---
-#- name: Hello World!
-#  hosts: all
-# 
-#  tasks:
-# 
-#  - name: Hello World!
-#    shell: echo "Hi! Tower is working."
-
-
 - name: Update the system
   hosts: all
   tasks:
@@ -17,4 +8,14 @@
     # update_cache: yes
   tags:
   - update
+
+
+#- name: Hello World!
+#  hosts: all
+# 
+#  tasks:
+# 
+#  - name: Hello World!
+#    shell: echo "Hi! Tower is working."
+
 
