@@ -8,6 +8,8 @@
     apt:
       update_cache: yes
     become: yes
+    tags:
+    - update
 
 #    shell: echo "Hi! Tower is working."
 #
