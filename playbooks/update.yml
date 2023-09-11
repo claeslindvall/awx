@@ -12,7 +12,7 @@
   hosts: all
   tasks:
   become: yes
-  ansible.builtin.apt:
+  apt:
     update_cache: yes
   tags:
   - update
