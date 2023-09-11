@@ -1,8 +1,11 @@
 ---
-- name: Test roles
-  hosts: all
+- name: Some Roles
+  # hosts: all
   roles:
     - common
+    - webservers
+    - proxmox
+    - virtualmachines
 
 #- name: Hello World!
 #  hosts: all
