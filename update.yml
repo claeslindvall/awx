@@ -1,6 +1,6 @@
 ---
 - name: Hello World!
-  # hosts: all
+  hosts: all
  
   tasks:
  
@@ -11,13 +11,16 @@
     tags:
     - update
  
-#- name: Some Roles
-#  hosts: all
-#  roles:
-#    - common
-#    - webservers
-#    - proxmox
-#    - virtualmachines
+- name: Some Roles
+  hosts: all
+  roles:
+    - common
+    - webservers
+    - proxmox
+    - virtualmachines
+  become: yes
+  tags:
+  - diverse
 #
 #- name: Hello World!
 #  hosts: all
