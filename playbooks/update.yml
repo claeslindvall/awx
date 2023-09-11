@@ -9,6 +9,7 @@
 
 
 - name: Update the system
+  hosts: all
   tasks:
   become: yes
   ansible.builtin.apt:
