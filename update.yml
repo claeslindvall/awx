@@ -1,6 +1,6 @@
 ---
 - name: Hello World!
-  hosts: all
+  # hosts: all
  
   tasks:
  
@@ -10,6 +10,7 @@
     become: yes
     tags:
     - update
+ 
 #- name: Some Roles
 #  hosts: all
 #  roles:
