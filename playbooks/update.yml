@@ -1,21 +1,21 @@
 ---
-- name: Update the system
+- name: Hello World!
   hosts: all
+ 
   tasks:
-  become: yes
-  shell: echo "Hi! Tower is working."
-  # apt:
-    # update_cache: yes
-  tags:
-  - update
+ 
+  - name: Hello World!
+    shell: echo "Hi! Tower is working."
 
 
-#- name: Hello World!
+#- name: Update the system
 #  hosts: all
-# 
 #  tasks:
-# 
-#  - name: Hello World!
-#    shell: echo "Hi! Tower is working."
+#  become: yes
+#  shell: echo "Hi! Tower is working."
+#  # apt:
+#    # update_cache: yes
+#  tags:
+#  - update
 
 
