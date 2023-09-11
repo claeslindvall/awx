@@ -1,15 +1,20 @@
 ---
-- name: Hello World!
+- name: Test roles
   hosts: all
- 
-  tasks:
- 
-  - name: Hello World!
-    apt:
-      update_cache: yes
-    become: yes
-    tags:
-    - update
+  roles:
+    - common
+
+#- name: Hello World!
+#  hosts: all
+# 
+#  tasks:
+# 
+#  - name: Hello World!
+#    apt:
+#      update_cache: yes
+#    become: yes
+#    tags:
+#    - update
 
 #    shell: echo "Hi! Tower is working."
 #
