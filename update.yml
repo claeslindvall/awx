@@ -9,6 +9,7 @@
       update_cache: yes
     become: yes
     tags:
+    - update
 #- name: Some Roles
 #  hosts: all
 #  roles:
