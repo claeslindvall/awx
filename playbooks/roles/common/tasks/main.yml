@@ -1,4 +1,8 @@
 ---
-# tasks file for common
-tasks:
-  - ping
+- name: Hello World!
+  apt:
+    update_cache: yes
+  become: yes
+  tags:
+  - update
+
