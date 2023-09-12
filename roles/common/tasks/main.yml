@@ -1,8 +1,41 @@
 ---
-- name: Hello World!
+- name: Add clindvall in sudoers
+  become: yes
+  ansible.builtin.lineinfile:
+    path: /etc/sudoers.d/clindvall
+    search_string: 'clindvall'
+    line: "clindvall ALL=(ALL) NOPASSWD: ALL"
+    owner: root
+    group: root
+    mode: '0644'
+    create: yes
+  tags:
+  - sudoers
+
+- name: Set hostname
+  become: yes
+  hostname:
+    name: "{{ inventory_hostname }}"
+  tags:
+  - set-hostname 
+
+- name: Set timezone to Europe/Stockholm
+  become: yes
+  ansible.builtin.shell: timedatectl set-timezone Europe/Stockholm
+  tags:
+  - set-timezone
+
+- name: Update apt
   apt:
     update_cache: yes
   become: yes
   tags:
   - update
+   
+- name: Upgrade the OS (apt full-upgrade)
+  become: yes
+  ansible.builtin.apt:
+    upgrade: dist
+  tags:
+  - upgrade
 

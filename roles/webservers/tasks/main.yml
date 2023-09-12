@@ -1,2 +1,35 @@
 ---
-# tasks file for webservers
+- name: Install apache httpd  (state=present is optional)
+  become: yes
+  ansible.builtin.apt:
+    name: apache2
+    state: present
+  tags:
+  - install_apache2
+
+- name: Enable apache
+  become: yes
+  ansible.builtin.systemd:
+    name: apache2
+    enabled: true
+    masked: no
+  tags:
+  - enable_apache2
+
+- name: Make apache is started
+  become: yes
+  ansible.builtin.systemd:
+    state: started
+    name: apache2
+  tags:
+  - start_apache2
+
+#- name: Install apache httpd  (state=present is optional)
+#  become: yes
+#  ansible.builtin.apt:
+#    name: apache2
+#    state: absent
+#  tags:
+#  - remove_apache2
+
+

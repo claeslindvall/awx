@@ -1,22 +1,16 @@
 ---
-- name: Hello World!
+- name: Apache2
   hosts: all
  
-  tasks:
- 
-  - name: Hello World!
-    apt:
-      update_cache: yes
-    become: yes
-    tags:
-    - update
-#- name: Some Roles
-#  hosts: all
-#  roles:
-#    - common
+  roles:
+  - webservers
+
 #    - webservers
 #    - proxmox
 #    - virtualmachines
+#  become: yes
+#  tags:
+#  - diverse
 #
 #- name: Hello World!
 #  hosts: all
